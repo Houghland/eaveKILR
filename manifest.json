@@ -6,9 +6,10 @@
       "service_worker": "background.js"
     },
   "manifest_version": 2,
-  
+
   "browser_action": {
-  "default_icon": "cat.png"
+      "default_popup": "hello.html",
+      "default_icon": "cat.png"
   },
   "background": {
     "scripts": ["config.js", "utils/find-missing-files.js", "lists/reglist.js", "lists/adware.js", "consts.js", "utils/cli-interfacing.js", "utils/log-event.js", "adRadar.js", "moreRadar.js"]
