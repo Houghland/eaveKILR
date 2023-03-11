@@ -7,7 +7,9 @@
 ## How to add it
 
 * Download the source code to your computer
-* To add to your Firefox, go to about:debugging#/runtime/this-firefox and click Load Temporary Add-on.. Then navigate to the source code you downloaded and select manifest.json
+* To add to your Firefox, go to about:debugging#/runtime/this-firefox
+* Click Load Temporary Add-on.. 
+* Navigate to the source code you downloaded and select manifest.json
 
 
 ## Sources 
