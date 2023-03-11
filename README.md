@@ -2,7 +2,7 @@
 
 ## What it does
 
-* this add-on detects ads and gives them a border
+* This add-on is an ad-blocker for Firefox
 
 ## How to add it
 
