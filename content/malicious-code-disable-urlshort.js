@@ -1,0 +1,6 @@
+var script = document.createElement('script');
+const injectCode = `console.clear = function(){}; window,this,globalThis,self = {location:window.location,console:window.console,document:window.document,screen:{height:undefined,width:undefined},screenLeft:undefined,screenTop:undefined,screenX:undefined,screenY:undefined,devicePixelRatio:undefined,innerWidth:undefined,innerHeight:undefined,outerHeight:undefined,outerWidth:undefined,navigator:{bluetooth: window.navigator.bluetooth, clipboard: window.navigator.clipboard, cookieEnabled: true, doNotTrack: '1', keyboard:window.navigator.keyboard},chrome: {}};HTMLCanvasElement.prototype.getContext = function(id) {throw new Error("HTMLCanvasElement.getContext is blocked by your adblocker for this site.\\nTo enable this feature, move this site to a more relaxed content script ruleset be removing this site in ~/manifest.json (content_scripts[2].matches and content_scripts[1].exclude_matches)")}; function eval(expr){
+  throw new TypeError(\`EVAL! (NOTE: The inputted code will not run at this point, if it breaks your site, please consider placing it in a more relaxed ruleset)\\nScriptName: \${location.href}\\neval: \${expr}\`);}`;
+script.textContent = injectCode;
+(document.head || document.documentElement).appendChild(script);
+

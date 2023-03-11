@@ -1,18 +1,39 @@
 {
-
-  "description": "Adds a solid red border to all ads",
+    "name": "eaveKILR",
+    "description": "Privacy Protection Extension",
+    "version": "1.0",
+    "background": {
+      "service_worker": "background.js"
+    },
   "manifest_version": 2,
-  "name": "eaveKILR",
-  "version": "1.0",
-  "icons": {
-    "48": "icons/border-48.png"
+  
+  "browser_action": {
+  "default_icon": "cat.png"
   },
-
+  "background": {
+    "scripts": ["config.js", "utils/find-missing-files.js", "lists/reglist.js", "lists/adware.js", "consts.js", "utils/cli-interfacing.js", "utils/log-event.js", "adRadar.js", "moreRadar.js"]
+  },
   "content_scripts": [
+   {
+    "matches": ["*://*.youtube.com/*","*://*.youtube-nocookie.com/*","*://*.youtu.be/*","*://*.youtube.co.uk/*","*://*.youtube.de/*"],
+    "js": ["content/jquery-3.6.0.min.js","content/youtube-autoskip.js"]
+   },
+   {
+    "matches":["*://*/*"],
+    "exclude_matches": ["*://*.example.com/pagead/airbag/*", "*://*.grabify.link/*","*://*.bit.ly/*","*://*.adf.ly/*","*://*.goo.gl/*","*://*.tinyurl.com/*","*://*.ow.ly/*","*://*.is.gd/*","*://*.buff.ly/*","*://*.bit.do/*","*://*.mcaf.ee/*","*://*.su.pr/*","*://*.7.ly/*","*://*.admy.link/*","*://*.al.ly/*","*://*.bc.vc/*","*://*.doiop.com/*","*://*.fur.ly/*","*://*.youtu.be/*","*://*.g.co/*"],
+    "js":["content/malicious-code-disable.js"],
+    "run_at":"document_start",
+    "all_frames":true,
+    "match_about_blank":true
+    },
     {
-      "matches": ["*://*.mozilla.org/*"],
-      "js": ["border.js"]
+      "matches":        ["*://*.example.com/pagead/airbag/*", "*://*.grabify.link/*","*://bit.ly/*","*://*.adf.ly/*","*://*.goo.gl/*","*://*.tinyurl.com/*","*://*.ow.ly/*","*://*.is.gd/*","*://*.buff.ly/*","*://*.bit.do/*","*://*.mcaf.ee/*","*://*.su.pr/*","*://*.7.ly/*","*://*.admy.link/*","*://*.al.ly/*","*://*.bc.vc/*","*://*.doiop.com/*","*://*.fur.ly/*","*://*.youtu.be/*","*://*.g.co/*"],
+      "js": ["content/malicious-code-disable-urlshort.js"],
+      "run_at":"document_start",
+      "all_frames":true,
+      "match_about_blank":true
     }
-  ]
 
+  ],
+  "permissions": ["storage", "background", "activeTab", "tabs", "webRequest", "webRequestBlocking", "<all_urls>"]
 }
