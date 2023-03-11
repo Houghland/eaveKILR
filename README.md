@@ -15,5 +15,8 @@
 * https://dev.to/andreygermanov/create-a-google-chrome-extension-part-1-image-grabber-1foa
 * https://github.com/surajondev/extension-calculator
 * https://github.com/MartinDoesCodingStuff/AdBlockingStuff
+* https://github.com/gorhill/uBlock
+* nathan-149/adblock-extension-nodetect
+* CatBlock/catblock
 * https://blog.mozilla.org/addons/2009/01/28/how-to-develop-a-firefox-extension/
 
