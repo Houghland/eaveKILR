@@ -11,5 +11,9 @@
 
 
 ## Sources 
+* https://daily.dev/blog/create-chrome-extension-with-html-css-and-javascript
+* https://dev.to/andreygermanov/create-a-google-chrome-extension-part-1-image-grabber-1foa
+* https://github.com/surajondev/extension-calculator
 * https://github.com/MartinDoesCodingStuff/AdBlockingStuff
 * https://blog.mozilla.org/addons/2009/01/28/how-to-develop-a-firefox-extension/
+
