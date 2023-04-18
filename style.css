@@ -37,6 +37,7 @@ body {
 
   .image-container {
     position: relative;
+    width: 700px;
   }
   
   h1 {
@@ -60,11 +61,17 @@ body {
     left: 20;
   }
 
+  .text-overlay {
+    position: absolute;
+    top: 50;
+    left: 350;
+  }
+
   button {
     position: absolute;
-    top: 370;
-    left: 300;
-    background-color: #4CAF50; /* Green */
+    top: 375;
+    left: 540;
+    background-color: #3dc9c9; /* Green */
     border: none;
     color: white;
     /* padding: 15px 32px; */
@@ -75,9 +82,6 @@ body {
     /* margin: 4px 2px; */
     cursor: pointer;
   }
-  
-  .image-container {
-    position: relative;
-  }
+
 
   
